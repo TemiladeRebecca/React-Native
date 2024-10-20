@@ -4,6 +4,7 @@ import { useState } from 'react';
 export default function TextInputGoal(props) {
     const [inputGoal, setInputGoal] = useState('');
 
+    
     const inputGoalHandler = (text) => {
         setInputGoal(text);
     };
