@@ -44,8 +44,7 @@ export default function App () {
                         onDeleteItem={deleteGoalHandler} 
                         id={item.id} />
                 )}}
-            keyExtractor={(item) => item.id}/>
-            
+            keyExtractor={(item) => item.id}/>            
         </View>
     );
 }
@@ -56,7 +55,6 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingTop: 50,
     },
-
     button: {
         padding: 16,
         alignItems: 'center',
