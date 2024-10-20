@@ -11,8 +11,6 @@ export default function TextInputData(props) {
             <Pressable android_ripple={{color: '#dddddd'}} onPress={deleteItem}>
                 <Text style={{color: '#596270', fontSize: 20}}>{props.text}</Text>
             </Pressable>
-        </View>
-        
-        
+        </View>     
     );
 }
