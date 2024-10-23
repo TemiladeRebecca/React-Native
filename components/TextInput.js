@@ -42,8 +42,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#311b6b',
         padding: 16,
-        
-
     },
     textInputComponent: {
         width: '100%',

@@ -1,4 +1,4 @@
-import { View, StyleSheet, FlatList, Text, Pressable } from "react-native";
+import { View, StyleSheet, FlatList, Text, Pressable, ImageBackground } from "react-native";
 import { useState } from "react";
 import TextInputGoal from "./components/TextInput";
 import TextInputData from "./components/TextInputData";
@@ -27,7 +27,12 @@ export default function App () {
         setModalIsVisible(false)
     }
     return (
-        <View style={styles.mainComponent}>
+        <ImageBackground 
+            source={require('./assets/images/arrows.jpg')}
+            resizeMode="cover"
+            style={styles.rootScreen}
+            imageStyle={styles.backgroundStyle}>
+            <View style={styles.mainComponent}>
             <Pressable style={styles.button} onPress={openModalHandler}>
                 <Text style={styles.text}>Add New Goal</Text>
             </Pressable>
@@ -46,13 +51,19 @@ export default function App () {
                 )}}
             keyExtractor={(item) => item.id}/>            
         </View>
+    </ImageBackground>
+        
     );
 }
 
-
 const styles = StyleSheet.create({
-    mainComponent: {
+    rootScreen: {
         flex: 1,
+    },
+    backgroundStyle: {
+        opacity: 0.3
+    },
+    mainComponent: {
         paddingTop: 50,
     },
     button: {
